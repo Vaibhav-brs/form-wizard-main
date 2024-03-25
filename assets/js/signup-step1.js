@@ -293,7 +293,7 @@ function toggle() {
   }
 }
 
-function validation() {
+function validationPhone() {
   var phoneNumberInput = document.getElementById("phone_number");
   var phoneNumber = phoneNumberInput.value;
   // Regular expression for a valid phone number (simple example for illustration)
@@ -321,18 +321,3 @@ function validateForm() {
       return true; // Allow form submission
   }
 }
-
-//function validatePhoneNumber() {
-  //const phoneNumber = document.getElementById('phone').value;
-  //const phoneError = document.getElementById('phoneError');
-  ///const phoneRegex = /^[0-9]+$/;
-
-  //if (phoneNumber.trim() === '') {
-    //  phoneError.textContent = "Please enter a phone number.";
-  //} else if (!phoneRegex.test(phoneNumber)) {
-      //phoneError.textContent = "Please enter a valid phone number (only digits allowed).";
- // } else {
-   //   phoneError.textContent = ""; // Clear the error message
-      // Perform further actions if needed
-  //}
-//}
