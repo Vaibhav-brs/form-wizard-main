@@ -141,12 +141,35 @@
                         
                         
                       </div>
-                      
-                      <div>
-                        <button class="btn btn-primary" type="submit">Continue</button>
+                      <label for="phone"
+                            ><h1 style="font-size: medium">Phone Number:</h1></label
+                          >
+                          <input
+                            type="text"
+                            name="phone_number"
+                            id="phone_number"
+                            size="40"
+                            placeholder="+91 9999999999"
+                            autocomplete="off"
+                          />
+                    <form>
+                      <label for="country">Country:</label>
+                      <select id="country" name="country">
+                          <option value="">Select a country</option>
+                          <option value="USA">USA</option>
+                          <option value="UK">UK</option>
+                          <option value="Canada">Canada</option>
+                          <option value="India">India</option>
+                          <!-- Add more options as needed -->
+                      </select>
+                      <br>
+                      <br>
+                      <div><span id="countryError" class="error-message"></span>
+                       <button class="btn btn-primary" type="submit">Continue</button><br><br>
                       </div>
                     </form>
                     <div>
+                      <br>
                       
                       <!-- Password generator -->
                       <div class="modal-container" id="modal_container">
@@ -229,6 +252,12 @@
       </div>
     </div>
   </main>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
   <footer class="footer footer-dark">
     <div class="d-flex justify-content-between px-5">

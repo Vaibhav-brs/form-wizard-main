@@ -292,3 +292,47 @@ function toggle() {
     return true
   }
 }
+
+function validation() {
+  var phoneNumberInput = document.getElementById("phone_number");
+  var phoneNumber = phoneNumberInput.value;
+  // Regular expression for a valid phone number (simple example for illustration)
+  var phoneRegex = /^\+91 \d{10}$/;
+  if (!phoneRegex.test(phoneNumber)) {
+    //alert("Invalid phone number. Please enter a valid phone number.");
+    phoneNumberInput.style.borderColor = "red";
+    phoneNumberInput.classList.add("error");
+    return false;
+  } else {
+    // Remove error message and reset border
+    phoneNumberInput.classList.remove("error");
+    return true;
+  }
+}
+function validateForm() {
+  var countrySelect = document.getElementById('country');
+  var countryError = document.getElementById('countryError');
+  if (countrySelect.value === '') {
+      countryError.textContent = 'Please select a country';
+      return false; // Prevent form submission
+  }
+  else {
+      countryError.textContent = ''; // Clear error message
+      return true; // Allow form submission
+  }
+}
+
+//function validatePhoneNumber() {
+  //const phoneNumber = document.getElementById('phone').value;
+  //const phoneError = document.getElementById('phoneError');
+  ///const phoneRegex = /^[0-9]+$/;
+
+  //if (phoneNumber.trim() === '') {
+    //  phoneError.textContent = "Please enter a phone number.";
+  //} else if (!phoneRegex.test(phoneNumber)) {
+      //phoneError.textContent = "Please enter a valid phone number (only digits allowed).";
+ // } else {
+   //   phoneError.textContent = ""; // Clear the error message
+      // Perform further actions if needed
+  //}
+//}
