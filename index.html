@@ -141,17 +141,18 @@
                         
                         
                       </div>
-                      <label for="phone"
-                            ><h1 style="font-size: medium">Phone Number:</h1></label
-                          >
-                          <input
-                            type="text"
-                            name="phone_number"
-                            id="phone_number"
-                            size="40"
-                            placeholder="+91 9999999999"
-                            autocomplete="off"
-                          />
+                      <label for="phone">
+                        <h1 style="font-size: medium">Phone Number:</h1>
+                    </label>
+                    <input
+                        type="text"
+                        name="phone_number"
+                        id="phone_number"
+                        size="40"
+                        placeholder="+91 9999999999"
+                        autocomplete="off"
+                        oninput="validatePhoneNumber(this)"
+                    />
                     <form>
                       <label for="country">Country:</label>
                       <select id="country" name="country">
