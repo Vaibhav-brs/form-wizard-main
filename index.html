@@ -153,23 +153,21 @@
                         autocomplete="off"
                         oninput="validatePhoneNumber(this)"
                     />
-                    <form>
-                      <label for="country">Country:</label>
+                    <label for="country">Country:</label>
                       <select id="country" name="country">
-                          <option value="">Select a country</option>
+                          <option value="Select a country">Select a country</option>
                           <option value="USA">USA</option>
                           <option value="UK">UK</option>
                           <option value="Canada">Canada</option>
                           <option value="India">India</option>
                           <!-- Add more options as needed -->
                       </select>
-                      <br>
-                      <br>
-                      <div><span id="countryError" class="error-message"></span>
-                       <button class="btn btn-primary" type="submit">Continue</button><br><br>
-                      </div>
-                    </form>
-                    <div>
+                      
+                      <span id="countryError" class="error-message"></span> <!-- Error message span -->
+                      <br><br>
+                      <button type="submit">Submit</button>
+                  </form>
+                  
                       <br>
                       
                       <!-- Password generator -->

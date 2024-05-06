@@ -299,14 +299,20 @@ function validatePhoneNumber(input) {
   // Update the input value
   input.value = phoneNumber;
 }
+
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+  validateForm(); // Call the validation function
+});
+
 function validateForm() {
   var countrySelect = document.getElementById('country');
   var countryError = document.getElementById('countryError');
-  if (countrySelect.value === '') {
+
+  if (!countrySelect.value || countrySelect.value === 'Select a country') {
       countryError.textContent = 'Please select a country';
       return false; // Prevent form submission
-  }
-  else {
+  } else {
       countryError.textContent = ''; // Clear error message
       return true; // Allow form submission
   }
